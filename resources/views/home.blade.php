@@ -9,15 +9,20 @@
 </head>
 
 <body>
-    <div class="container">
-        <h1>Movie</h1>
-        <ul>
+    <div class="container d-flex flex-wrap justify-content-between gap-5">
         @foreach ($movies as $item)
-            <li>{{$item->title}}</li>
+            <div class="card col-4" style="width: 18rem;">
+                <div class="card-body">
+                    <h4 class="card-title">{{$item->title}}</h4>
+                    <p class="card-text">Original title: {{$item->original_title}}</p>
+                    <p class="card-text">Nazionalità: {{$item->nationality}}</p>
+                    <p class="card-text">Data uscita: {{$item->date}}</p>
+                    <p class="card-text">Voto: {{$item->vote}}</p>
+                </div>
+            </div>
         @endforeach
-        </ul>
-    </div>
 
+    </div>
 </body>
 
 </html>
