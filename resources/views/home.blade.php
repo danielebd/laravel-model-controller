@@ -12,8 +12,8 @@
     <div class="container">
         <h1>Movie</h1>
         <ul>
-        @foreach ($movie as $item)
-            <li></li>
+        @foreach ($movies as $item)
+            <li>{{$item->title}}</li>
         @endforeach
         </ul>
     </div>

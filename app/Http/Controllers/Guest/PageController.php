@@ -11,10 +11,9 @@ class PageController extends Controller
     public function index()
     {
 
-        $movie = Movie::all();
-        dd($movie);
+        $movies = Movie::all();
+        
 
-
-        return view('home', compact('movie'));
+        return view('home', compact('movies'));
     }
 }
